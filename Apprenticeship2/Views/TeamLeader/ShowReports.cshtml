@@ -1,0 +1,52 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Report
+<h2>Assignment Name: @ViewBag.AssignmentTitle</h2>
+<br />
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Assignments</h4>
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-striped table-bordered zero-configuration">
+    <thead>
+        <tr>
+            <th>Report Name</th>
+            <th>Report Description</th>
+            <th>Report Notes</th>
+            <th>Report Status</th>
+            <th>View</th>
+         </tr>
+    </thead>
+   <tbody>
+        @foreach (var R in (List<Report>)ViewBag.Reports)
+        {
+            <tr>
+
+                <td>@R.reportName</td>
+                <td>@R.reportDescription</td>
+                <td>@R.reportNotes</td>
+                <td>@R.reportStatus.statusName</td>
+                @if (R.reportStatusId == 1)
+                {
+                    <td><a href="/TeamLeader/ShowOneReport?ReportId=@R.reportId" class="text-info">View</a></td>
+                }
+                else
+                {
+                    <td><a href="/TeamLeader/ShowOneReport?ReportId=@R.reportId" class="text-info" style="pointer-events:none; background-color:gray">View</a></td>
+                }
+            </tr>
+        }
+   </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

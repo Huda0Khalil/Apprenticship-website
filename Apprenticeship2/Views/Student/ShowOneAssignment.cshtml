@@ -1,0 +1,141 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Assignment
+
+@{
+    var ass = ViewBag.OneAssignment;
+}
+<h2 class="m-3 text-black text-center">Assignments</h2>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">@Model.assignmentTitle</h4>
+                <!-- Nav tabs -->
+                <div class="custom-tab-1">
+                    <ul class="nav nav-tabs mb-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#description">Description</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#objectives">Objectives</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#Notes">Notes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#Date">Date</a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="description" role="tabpanel">
+                            <div class="p-t-15">
+                                <h4>@Model.assignmentTitle</h4>
+                                <p>@Model.AssignmentDescription</p>
+                                <h5>Files</h5>
+                                <ul>
+                                    @foreach(var AF in (List<AssignmentFiles>)Model.fileAttatchments)
+                                    {
+                                        <li class="p-4 border border-primary bg-light"><a href="/Assignment/GetFile?attachmentId=@AF.assignmentFilesId">@AF.name</a></li>
+                                    }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="objectives">
+                            <div class="p-t-15">
+                                <h4>@Model.assignmentTitle</h4>
+                                <ul>
+                                @foreach(var AO in (List<AssignmentObjectives>)Model.assignmentObjectives)
+                                {
+                                    <li>
+                                            @AO.objective.Name
+                                    </li>
+                                }
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Notes">
+                            <div class="p-t-15">
+                                <h4>@Model.assignmentTitle</h4>
+                                <p>@Model.assignmentNotes</p>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="Date">
+                            <div class="p-t-15">
+                                <h4>@Model.assignmentTitle</h4>
+                                <p>Star Date: @Model.startDate</p>
+                                <p>End Date: @Model.endDate</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <h2 class="m-3 text-black text-center">Reports</h2>
+fl;
+
+
+<div class="row">
+    @foreach (var R in (List<Report>)ViewBag.Reports)
+    {
+    <div class="col-lg-12">
+        <div class="card border-info">
+           
+            <div class="card-body">
+                    <h5 class="card-title">@R.reportName</h5>
+                    <h3>Report Description:</h3>
+                    <p class="card-text"> @R.reportDescription</p>
+                    <h3>Report Notes:</h3>
+                    <p class="card-text"> @R.reportNotes</p>
+                   
+                    @if(R.reportStatusId == 1)
+                    {
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text btn bg-warning"><strong class="text-black">Report Status: </strong>@R.reportStatus.statusName</p>
+                            <div>
+                                <a href="/Report/Update?reportID=@R.reportId" class="btn btn-primary btn-rounded ">Go</a>
+                            </div>
+                            <div class="row m-1 d-flex justify-content-center">
+                                <a href="/Report/ShowReports?AID=@Model.AssignmentId" class="btn mb-1 btn-rounded btn-secondary btn-lg">All Reports</a>
+                            </div>
+                         </div>
+                    }
+                    else if (R.reportStatusId == 2)
+                    {
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text btn bg-success"><strong class="text-black">Report Status: </strong> @R.reportStatus.statusName</p>
+                            <div>
+                                <a href="/Report/Update?reportID=@R.reportId" class="btn btn-primary btn-rounded ">Go</a>
+                            </div>
+                            <div class="row m-1 d-flex justify-content-center">
+                                <a href="/Report/ShowReports?AID=@Model.AssignmentId" class="btn mb-1 btn-rounded btn-secondary btn-lg">All Reports</a>
+                            </div>
+                        </div>
+                    }
+                    else if(R.reportStatusId == 3)
+                    {
+                        <div class="d-flex justify-content-between">
+                            <p class="card-text btn bg-danger"><strong class="text-black">Report Status: </strong> @R.reportStatus.statusName</p>
+                            <div>
+                                <a href="/Report/Update?reportID=@R.reportId" class="btn btn-primary btn-rounded ">Go</a>
+                            </div>
+                            <div class="row m-1 d-flex justify-content-center">
+                                <a href="/Report/ShowReports?AID=@Model.AssignmentId" class="btn mb-1 btn-rounded btn-secondary btn-lg">All Reports</a>
+                            </div>
+                        </div>
+                    }
+                </div>
+            
+        </div>
+    </div>
+    }
+    
+</div>

@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Company
+<form method="post" action="/Company/UpdateCompany">
+    <h2>Add Company</h2>
+    <hr />
+    <input asp-for="companyId" hidden/>
+    <div class="form-floating">
+        <input asp-for="companyName" class="form-control" aria-required="true" />
+        <label asp-for="companyName"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="companyLocation" class="form-control" aria-required="true" />
+        <label asp-for="companyLocation"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="companyEmail" class="form-control" aria-required="true" />
+        <label asp-for="companyEmail"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="companyPhone" class="form-control" aria-required="true" />
+        <label asp-for="companyPhone"></label>
+    </div>
+    <button type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+
+</form>

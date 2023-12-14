@@ -1,0 +1,116 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@using Apprenticeship2.Data.DTO
+@model InsertUniversitySupervisorDTO
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-validation">
+
+                        <form method="post" action="/UniversitySupervisor/insertSupervisor" class="form-valide">
+                            <h2>Create a new University Supervisor.</h2>
+                            <hr />
+
+                            <div class="form-group row">
+                                <label asp-for="firstName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="firstName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="firstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="secondName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="secondName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="secondName" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="thirdName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="thirdName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="thirdName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="lastName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="lastName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="lastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row" >
+                                <label asp-for="Email" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Email" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row" >
+                                <label asp-for="Age" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Age" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Age" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="Address" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Address" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="universityId" class="col-lg-4 col-form-label">University</label>
+                                <div class="col-lg-6">
+                                <select asp-for="universityId" class="form-control">
+                                    @foreach (var u in (List<University>)ViewBag.universities)
+                                    {
+                                        <option value="@u.universityId">@u.universityName</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="universityId" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="PhoneNumber" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="PhoneNumber" class="form-control" aria-required="true" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="password" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="password" class="form-control" aria-required="true" />
+                                <span asp-validation-for="password" class="text-danger"></span>
+                                </div>
+                            </div>
+                           <div class="form-group row">
+                                <label asp-for="ConfirmPassword" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="ConfirmPassword" class="form-control" aria-required="true" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group row">
+                                <div class="col-lg-8 ml-auto">
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model UniversitySupervisor
+
+<form method="post" action="/UniversitySupervisor/updateSupervisor">
+    <h2>Update University Supervisor</h2>
+    <hr />
+    <input asp-for="Id" hidden />
+
+    <div class="form-floating">
+        <input asp-for="FirstName" class="form-control" aria-required="true" />
+        <label asp-for="FirstName"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="SecondName" class="form-control" aria-required="true" />
+        <label asp-for="SecondName"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="ThirdName" class="form-control" aria-required="true" />
+        <label asp-for="ThirdName"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="LastName" class="form-control" aria-required="true" />
+        <label asp-for="LastName"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="Email" class="form-control" aria-required="true" />
+        <label asp-for="Email"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="Age" class="form-control" aria-required="true" />
+        <label asp-for="Age"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="Address" class="form-control" aria-required="true" />
+        <label asp-for="Address"></label>
+    </div>
+    
+    <div class="form-floating">
+        <select asp-for="universityId" class="form-control">
+            @foreach (var u in (List<University>)ViewBag.universities)
+            {
+                <option value="@u.universityId">@u.universityName</option>
+            }
+        </select>
+        <label asp-for="universityId">University</label>
+    </div>
+
+    <div class="form-floating">
+        <input asp-for="PhoneNumber" class="form-control" aria-required="true" />
+        <label asp-for="PhoneNumber"></label>
+    </div>
+    
+
+    <button type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+</form>

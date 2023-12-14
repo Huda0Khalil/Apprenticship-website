@@ -1,0 +1,50 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}@{
+    var Ass = ViewBag.Assignment;
+}
+@using Apprenticeship2.Data.Entities
+<div class="container-fluid mt-3">
+    <h2 class="m-3 text-black text-center">Assignment</h2>
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+            <div class="card bg-light">
+                <div class="card-body card-body shadow-lg p-3 bg-white rounded">
+                    <div class="text-center">
+
+                        <h3 class="m-3 mb-1">@Ass.assignmentTitle </h3>
+                        <h3>Description:</h3>
+                        <h4 class="m-3 mb-1">@Ass.AssignmentDescription </h4>
+
+                        <h3 class="m-3">Objectives:</h3>
+                        <ol>
+                            @foreach (var AO in (List<AssignmentObjectives>)Ass.assignmentObjectives)
+                            {
+                                <li class="m-3 text-black">@AO.objective.Name</li>
+                            }
+                        </ol>
+                        <h3 class="m-3">Notes:</h3>
+                        <h6 class="m-3">@Ass.assignmentNotes</h6>
+                        <h3>Files:</h3>
+                        <ul>
+                            @foreach (var f in (List<AssignmentFiles>)Ass.fileAttatchments)
+                            {
+                                <li class="border border-1 p-2 bg-light">
+                                    <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=@f.assignmentFilesId">@f.name</a>
+                                </li>
+                            }
+                        </ul>
+                        <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+        
+
+    </div>
+</div>

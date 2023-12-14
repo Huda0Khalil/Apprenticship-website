@@ -1,0 +1,49 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Assignments</h4>
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-striped table-bordered zero-configuration">
+    <thead>
+        <tr>
+            <th>Assignment Title</th>
+            
+            <th>Start Date</th>
+            <th>End Date</th>
+            <th>View</th>
+            <th>Reports</th>
+            <th>Show TimeLine</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var A in (List<Assignment>)ViewBag.Ass)
+        {
+            <tr>
+
+                <td>@A.assignmentTitle</td>
+                
+                <td>@A.startDate</td>
+                <td>@A.endDate</td>
+                <td><a href="/UniversitySupervisor/ShowOneAssignment?AID=@A.AssignmentId" class="text-info">view</a></td>
+
+                <td><a href="/UniversitySupervisor/ShowReports?AssignmentId=@A.AssignmentId" class="mdi mdi-file-document-box text-green"></a></td>
+                <td><a href="/UniversitySupervisor/ShowTimeLine?AssignmentId=@A.AssignmentId" class="text-warning">TimeLine</a></td>
+            </tr>
+        }
+    </tbody>
+  
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

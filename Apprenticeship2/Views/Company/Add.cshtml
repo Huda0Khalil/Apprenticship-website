@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Company
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-validation">
+                        <form method="post" action="/Company/InsertCompany" class="form-valide">
+                            <h2>Add Company</h2>
+                            <hr />
+
+                            <div class="form-group row">
+                                <label asp-for="companyName" class="col-lg-4 col-form-label">Company Name</label>
+                                <div class="col-lg-6">
+                                <input asp-for="companyName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="companyName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="companyLocation" class="col-lg-4 col-form-label">Company Location</label>
+                                <div class="col-lg-6">
+                                <input asp-for="companyLocation" class="form-control" aria-required="true" />
+                                <span asp-validation-for="companyLocation" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="companyEmail" class="col-lg-4 col-form-label">Company Email</label>
+                                <div class="col-lg-6">
+                                <input asp-for="companyEmail" class="form-control" aria-required="true" />
+                                <span asp-validation-for="companyEmail" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="companyPhone" class="col-lg-4 col-form-label">Company Phone</label>
+                                <div class="col-lg-6">
+                                <input asp-for="companyPhone" class="form-control" aria-required="true" />
+                                <span asp-validation-for="companyPhone" class="text-danger"></span>
+                                </div>
+
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-8 ml-auto">
+                                    <button type="submit" class="btn btn-primary" >Submit</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

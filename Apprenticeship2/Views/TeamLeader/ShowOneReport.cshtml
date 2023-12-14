@@ -1,0 +1,68 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Report
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-validation">
+                        <form action="/TeamLeader/changeReportStatus" class="form-valide">
+                            <input asp-for="reportId" hidden/>
+                            <div class="form-group row">
+                                <label asp-for="reportName" class="col-lg-4 col-form-label"></label>
+
+                                <input readonly asp-for="reportName" class="form-control" aria-required="true" />
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label asp-for="reportDescription" class="col-lg-4 col-form-label"></label>
+
+                                <input readonly asp-for="reportDescription" class="form-control" aria-required="true" />
+
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label asp-for="reportNotes" class="col-lg-4 col-form-label"></label>
+
+                                <input readonly asp-for="reportNotes" class="form-control" aria-required="true" />
+
+                            </div>
+                            <br />
+                            <div class="form-group row">
+       
+                                @foreach (var a in (List<ReportFiles>)ViewBag.files)
+                                {
+                                    <div class="p-1 m-2">
+               
+                                        <p class="border border-1 p-2 bg-light" for="fileRemovedIDs"> <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=">@a.name</a></p>
+                                    </div>
+                                }
+                                <br />
+                                
+                                
+                            </div>
+                            <br />
+                            <div class="form-group row">
+                                <label asp-for="reportStatusId" class="col-lg-4 col-form-label">Report status</label>
+
+                                <select asp-for="reportStatusId" class="form-control" aria-required="true">
+                                    @foreach (var RS in (List<ReportStatus>)ViewBag.reportStatus)
+                                    {
+                                        <option value="@RS.reportStatusId">@RS.statusName</option>
+                                    }
+                                </select>
+                            </div>
+                            <button type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,60 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Report
+<h2>Assignment Name: @ViewBag.AssignmentTitle</h2>
+<br />
+<a href="/Report/Add?AssignmentID=@ViewBag.AssignmentID" class="btn btn-primary mb-4"> Creat a Report</a>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Reports Table</h4>
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-striped table-bordered zero-configuration">
+    <thead>
+        <tr>
+            <th>Report Name</th>
+            <th>Report Description</th>
+            <th>Report Notes</th>
+            <th>Report Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var R in (List<Report>)ViewBag.Reports)
+        {
+            <tr>
+
+                <td>@R.reportName</td>
+                <td>@R.reportDescription.Substring(0,5)</td>
+                <td>@R.reportNotes</td>
+                <td>@R.reportStatus.statusName</td>
+                @if (R.reportStatusId != 2)
+                {
+                    <td><a class="icon-note menu-icon text-warning" href="/Report/Update?reportID=@R.reportId"></a></td>
+                    <td><a class="ti-trash text-danger" href="/Report/Delete?reportID=@R.reportId"></a></td>
+                }
+                else
+                {
+                    <td><a class="icon-note menu-icon" href="/Report/Update?reportID=@R.reportId" style="pointer-events:none; background-color:gray"></a></td>
+                    <td><a class="ti-trash text-danger" href="/Report/Delete?reportID=@R.reportId" style="pointer-events:none; background-color:gray"></a></td>
+                }
+
+
+            </tr>
+        }
+    </tbody>
+    
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

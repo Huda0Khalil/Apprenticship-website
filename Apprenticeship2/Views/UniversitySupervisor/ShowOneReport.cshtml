@@ -1,0 +1,55 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Report
+
+<div class="container-fluid mt-3">
+    <h2 class="m-3 text-black text-center">Report</h2>
+    <div class="row d-flex justify-content-center">
+        <div class="col-lg-12">
+            <div class="card bg-light">
+                <div class="card-body card-body shadow-lg p-3 bg-white rounded">
+                    <div class="text-center">
+
+                        <h3 class="m-3 mb-1">@Model.reportName </h3>
+                        <h3>Description:</h3>
+                        <h4 class="m-3 mb-1">@Model.reportDescription </h4>
+
+                        
+                        <h3 class="m-3">Notes:</h3>
+                        <h6 class="m-3">@Model.reportNotes</h6>
+                        <h3>Files:</h3>
+                        @if(Model.reportFiles.Count()== 0)
+                        {
+                            <div>
+                                No files
+                            </div>
+                        }
+                        else
+                        {
+                            <ul>
+                                @foreach (var f in (List<ReportFiles>)Model.reportFiles)
+                                {
+                                    <li class="border border-1 p-2 bg-light">
+                                        <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=@f.reportFilesId">@f.name</a>
+                                    </li>
+                                }
+                            </ul>
+                        }
+                        <hr />
+                        <div>Report Status: @Model.reportStatus.statusName </div>
+                        <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <br />
+        <br />
+
+
+    </div>
+</div>

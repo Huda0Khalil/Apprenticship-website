@@ -1,0 +1,93 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@using Apprenticeship2.Data.DTO
+@model InsertTrainingDTO
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-validation">
+                        <form method="post" action="/Training/insertTraining" class="form-valide">
+                            <h2>Create a new Training.</h2>
+                            <hr />
+
+                            <div class="form-group row">
+                                <label asp-for="studentId" class="col-lg-4 col-form-label">Student</label>
+                                <div class="col-lg-6">
+                                <select asp-for="studentId" class="form-control">
+                                    @foreach (var St in (List<Student>)ViewBag.students)
+                                    {
+                                        <option value="@St.Id">@St.FirstName @St.LastName</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="studentId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="supervisorId" class="col-lg-4 col-form-label">University Supervisor</label>
+                                <div class="col-lg-6">
+                                <select asp-for="supervisorId" class="form-control">
+                                    @foreach (var Sup in (List<UniversitySupervisor>)ViewBag.supervisors)
+                                    {
+                                        <option value="@Sup.Id">@Sup.FirstName @Sup.LastName</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="supervisorId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="teamLeaderId" class="col-lg-4 col-form-label">Team Leader</label>
+                                <div class="col-lg-6">
+                                <select asp-for="teamLeaderId" class="form-control">
+                                    @foreach (var T in (List<TeamLeader>)ViewBag.teamLeaders)
+                                    {
+                                        <option value="@T.Id">@T.FirstName @T.LastName</option>
+                                    }
+                                </select>
+                                <span asp-validation-for="teamLeaderId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="startDate" class="col-lg-4 col-form-label">Start Date</label>
+                                <div class="col-lg-6">
+                                <input asp-for="startDate" class="form-control" aria-required="true" />
+                                <span asp-validation-for="startDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="endDate" class="col-lg-4 col-form-label">End Date</label>
+                                <div class="col-lg-6">
+                                <input asp-for="endDate" class="form-control" aria-required="true" />
+                                <span asp-validation-for="endDate" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="objectiveIDs" class="col-lg-4 col-form-label">Objectives</label>
+                                <div class="col-lg-6">
+                                <select asp-for="objectiveIDs" class="form-control" multiple>
+                                    @foreach (var O in (List<Objective>)ViewBag.objectives)
+                                    {
+                                        <option value="@O.objectiveId"> @O.Name </option>
+
+                                    }
+                                </select>
+                                <span asp-validation-for="objectiveIDs" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-8 ml-auto">
+                            <button type="submit" class="btn btn-primary">Add</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

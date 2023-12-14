@@ -1,0 +1,48 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@using Apprenticeship2.Data.Entities
+@model Training
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Trainings</h4>
+                <div class="table-responsive">
+                    <table id="myTable" class="table table-striped table-bordered zero-configuration">
+    <thead>
+    <tr>
+        <th>Student Name</th>
+        <th>University Supervisor</th>
+        <th>University</th>
+        <th>Student Email</th>
+        <th>Assignments</th>
+     </tr>
+    <thead>
+        <tbody>
+                @foreach (var T in (List<Training>)ViewBag.trainings)
+                {
+            <tr>
+
+                <td>@T.student.FirstName</td>
+                <td>@T.supervisor.FirstName</td>
+                <td>@T.student.University.universityName</td>
+                <td>@T.student.Email</td>
+                <td><a class="btn btn-primary mb-4" href="/Assignment/showAssignment?TID=@T.TrainingId">Assignment</a></td>
+            </tr>
+
+
+
+                }
+        </tbody>
+    
+    
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

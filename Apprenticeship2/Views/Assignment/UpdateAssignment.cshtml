@@ -1,0 +1,72 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.DTO
+@using Apprenticeship2.Data.Entities
+@model UpdateAssignmentDTO
+
+<form enctype="multipart/form-data" method="post" action="/Assignment/updateOneAssignment">
+    <h2>Update Assignment</h2>
+    <hr />
+    <input asp-for="trainingId" hidden />
+    <input asp-for="AssignmentId" hidden />
+
+    <div class="form-floating">
+        <input asp-for="assignmentTitle" class="form-control" aria-required="true" />
+        <label asp-for="assignmentTitle"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="AssignmentDescription" class="form-control" aria-required="true" />
+        <label asp-for="AssignmentDescription"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="assignmentNotes" class="form-control" aria-required="true" />
+        <label asp-for="assignmentNotes"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="startDate" class="form-control" aria-required="true" />
+        <label asp-for="startDate"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="endDate" class="form-control" aria-required="true" />
+        <label asp-for="endDate"></label>
+    </div>
+    <div class="form-floating">
+        <select class="form-control" asp-for="objectiveIDs">
+            @foreach (var O in (List<TrainingObjectives>)ViewBag.trainingobjectives)
+            {
+                <option value="@O.objectiveId">@O.objective.Name</option>
+            }
+        </select>
+        <label asp-for="objectiveIDs"></label>
+    </div>
+    <div class="form-floating">
+       
+            @foreach (var a in (List<AssignmentFiles>)ViewBag.files)
+            {
+            <div class="d-flex justify-content-start align-items-center">
+
+                <p class="p-2 border border-primary bg-light mr-3">
+                    <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=@a.assignmentFilesId">@a.name</a>
+
+                  </p> 
+                  <p>
+                    <a class="btn btn-danger " href="/AttachmentFile/DeleteFileAssignment?fileID=@a.assignmentFilesId&AID=@Model.AssignmentId">Delete</a>
+
+                  </p>
+                </div>
+            }
+       
+       
+     
+       
+        <input type="file" name="upFiles" multiple />
+      
+        <!-- </form>-->
+
+    </div>
+    <button type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+
+</form>

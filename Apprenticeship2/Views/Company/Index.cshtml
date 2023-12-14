@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@model Company
+<a href="/Company/Add" class="btn btn-primary mb-4">Add new company</a>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title text-center">Companies Table</h4>
+                <div class="table-responsive">
+                    <table class="table table-striped table-bordered zero-configuration">
+    <tr>
+        <th>Company Name</th>
+        <th>Company Email</th>
+        <th>Company Phone</th>
+        <th>Company Location</th>
+        
+        <th>Update</th>
+        <th>Delete</th>
+    </tr>
+    @foreach (var c in (List<Company>)ViewBag.companies)
+    {
+        <tr>
+            <td>@c.companyName</td>
+            <td>@c.companyEmail</td>
+            <td>@c.companyPhone</td>
+            <td>@c.companyLocation</td>
+
+            <td><a class="icon-note menu-icon text-warning" href="/Company/Update?comId=@c.companyId"></a></td>
+            <td><a class="ti-trash text-danger" href="/Company/Delete?comId=@c.companyId"></a></td>
+        </tr>
+    }
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>

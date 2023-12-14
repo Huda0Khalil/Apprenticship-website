@@ -1,0 +1,229 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Apprenticeship2
+build_property.RootNamespace = Apprenticeship2
+build_property.ProjectDir = C:\Users\ismael khallel\source\repos\Apprenticeship2\Apprenticeship2\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\ismael khallel\source\repos\Apprenticeship2\Apprenticeship2
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/Account/Logout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/Account/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxfVmlld0ltcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZhbGlkYXRpb25TY3JpcHRzUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Areas/Identity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Assignment/AddAsignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaWdubWVudFxBZGRBc2lnbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Assignment/showAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaWdubWVudFxzaG93QXNzaWdubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Assignment/UpdateAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzaWdubWVudFxVcGRhdGVBc3NpZ25tZW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Company/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Company/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Company/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGFueVxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Home/First.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGaXJzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Report/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Report/ShowReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFNob3dSZXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Report/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFVwZGF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxBZGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/ShowOneAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTaG93T25lQXNzaWdubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/StudentAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdHVkZW50QXNzaWdubWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/StudentsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxTdHVkZW50c1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Student/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/AddTeamLeader.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxBZGRUZWFtTGVhZGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/ShowOneReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxTaG93T25lUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/ShowReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxTaG93UmVwb3J0cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/TeamLeadersPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxUZWFtTGVhZGVyc1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/TeamLeaderTrainings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxUZWFtTGVhZGVyVHJhaW5pbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/TeamLeader/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVhbUxlYWRlclxVcGRhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Training/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Training/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Training/update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJhaW5pbmdcdXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/showAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3Jcc2hvd0Fzc2lnbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/ShowOneAssignment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcU2hvd09uZUFzc2lnbm1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/ShowOneReport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcU2hvd09uZVJlcG9ydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/ShowReports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcU2hvd1JlcG9ydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/ShowTimeLine.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcU2hvd1RpbWVMaW5lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/ShowTrainings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcU2hvd1RyYWluaW5ncy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/UniversitySupervisorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcVW5pdmVyc2l0eVN1cGVydmlzb3JQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/UniversitySupervisor/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVW5pdmVyc2l0eVN1cGVydmlzb3JcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Shared/_Layout - Copy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQgLSBDb3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-depjbwgm7d
+
+[C:/Users/ismael khallel/source/repos/Apprenticeship2/Apprenticeship2/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-fsq63b5g4y

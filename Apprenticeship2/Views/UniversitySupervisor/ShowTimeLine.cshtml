@@ -1,0 +1,253 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@{
+    int length = 1;
+}
+@using Apprenticeship2.Data.Entities
+@model ReportLog
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<h2 class="text-center py-3">TimeLine @ViewBag.AssignmentTitle</h2>
+
+<div class="container py-2 mt-4 mb-4">
+    
+        @foreach (var R in (IEnumerable<ReportLog>)ViewBag.reportLogs)
+        {
+            @if (length % 2 == 1)
+            {
+                <div class="row no-gutters">
+                    <div class="col-sm"></div>
+                    <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                        <div class="row h-50">
+                            <div class="col"> </div>
+                            <div class="col"> </div>
+                        </div>
+                        @if (R.reportStatusId == 1)
+                        {
+                            <h5 class="m-2">
+                                <span class="badge badge-pill bg-warning border"> </span>
+                            </h5>
+                        }
+                        else if (R.reportStatusId == 2)
+                        {
+                            <h5 class="m-2">
+                                <span class="badge badge-pill bg-success border"> </span>
+                            </h5>
+                        }
+                        else
+                        {
+                            <h5 class="m-2">
+                                <span class="badge badge-pill bg-danger border"> </span>
+                            </h5>
+                        }
+
+                        <div class="row h-50">
+                            <div class="col border-right"> </div>
+                            <div class="col"> </div>
+                        </div>
+                    </div>
+                    @if (R.reportStatusId == 2)
+                    {
+                    <div class="col-sm py-2">
+                        <div class="card border-success shadow">
+                            <div class="card-body">
+                                <div class="float-right small">@R.logDate</div>
+                                <h4 class="card-title text-success">Report name:@R.reportName</h4>
+                                <p class="card-text">@R.reportDescription.</p>
+                                @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                {
+                                    @if (s.reportStatusId == R.reportStatusId)
+                                    {
+                                        <p class="text-success">@s.statusName</p>
+                                    }
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                }
+                else if (R.reportStatusId == 1)
+                {                     
+                            <div class="col-sm py-2">
+                                <div class="card border-warning shadow ">
+                                    <div class="card-body">
+                                        <div class="float-right small">@R.logDate</div>
+                                        <h4 class="card-title text-warning">Report name: @R.reportName</h4>
+                                        <p class="card-text">@R.reportDescription.</p>
+                                        @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                        {
+                                            @if (s.reportStatusId == R.reportStatusId)
+                                            {
+                                                <p class="text-warning">@s.statusName</p>
+                                            }
+                                        }
+                                @foreach (var F in R.reportFiles)
+                                {
+                                   
+                                        <p class="border border-1 p-2 bg-light">
+                                            <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=@F.reportFilesId">
+                                                @F.name
+                                            </a>
+                                        </p>
+                                    
+                                }
+
+                            </div>
+                                </div>
+                            </div>
+                        
+                        
+                    }
+
+                
+
+                else
+                {
+                    <div class="col-sm py-2">
+                        <div class="card border-danger shadow">
+                            <div class="card-body">
+                                <div class="float-right small">@R.logDate</div>
+                                <h4 class="card-title text-danger">Report name: @R.reportName</h4>
+                                <p class="card-text">@R.reportDescription.</p>
+                                @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                {
+                                    @if (s.reportStatusId == R.reportStatusId)
+                                    {
+                                        <p class="text-danger">@s.statusName</p>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                }
+
+                    
+                </div>
+
+                <span hidden>@(length++) </span>
+            }
+            else
+            {
+                <div class="row no-gutters">
+                    @if (R.reportStatusId == 2)
+                    {
+                        <div class="col-sm py-2">
+                            <div class="card border-success shadow">
+                                <div class="card-body">
+                                    <div class="float-right small">@R.logDate</div>
+                                    <h4 class="card-title text-success">Report name: @R.reportName</h4>
+                                    <p class="card-text">@R.reportDescription.</p>
+                                    @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                    {
+                                        @if (s.reportStatusId == R.reportStatusId)
+                                        {
+                                            <p class="text-success">@s.statusName</p>
+                                        }
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else if (R.reportStatusId == 1)
+                   {
+                            <div class="col-sm py-2">
+                            <div class="card border-warning shadow">
+                                <div class="card-body">
+                                    <div class="float-right small">@R.logDate</div>
+
+                                    <h4 class="card-title text-warning">Report name: @R.reportName</h4>
+                                    <p class="card-text">@R.reportDescription.</p>
+                                @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                {
+                                    @if (s.reportStatusId == R.reportStatusId)
+                                    {
+                                        <p class="text-warning">@s.statusName</p>
+                                    }
+                                }
+                                @foreach (var F in R.reportFiles)
+                                {
+                                    
+                                        <p class="border border-1 p-2 bg-light">
+                                            <a class="text-decoration-none" target="_blank" href="/Assignment/GetFile?attachmentId=@F.reportFilesId">
+                                                @F.name
+                                            </a>
+                                        </p>
+                                    
+                                }
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                    <div class="col-sm py-2">
+                        <div class="card border-danger shadow">
+                            <div class="card-body">
+                                <div class="float-right small">@R.logDate</div>
+
+                                <h4 class="card-title text-danger">Report name: @R.reportName</h4>
+                                <p class="card-text">@R.reportDescription.</p>
+                                @foreach (var s in (List<ReportStatus>)ViewBag.status)
+                                {
+                                    @if (s.reportStatusId == R.reportStatusId)
+                                    {
+                                        <p class="text-danger">@s.statusName</p>
+                                    }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    }
+
+                
+            <div class="col-sm-1 text-center flex-column d-none d-sm-flex">
+                <div class="row h-50">
+                    <div class="col border-right"> </div>
+                    <div class="col"> </div>
+                </div>
+                @if (R.reportStatusId == 1)
+                {
+                    <h5 class="m-2">
+                        <span class="badge badge-pill bg-warning border"> </span>
+                    </h5>
+                }
+                else if (R.reportStatusId == 2)
+                {
+                    <h5 class="m-2">
+                        <span class="badge badge-pill bg-success border"> </span>
+                    </h5>
+                }
+                else
+                {
+                    <h5 class="m-2">
+                        <span class="badge badge-pill bg-danger border"> </span>
+                    </h5>
+                }
+                        
+                <div class="row h-50">
+                    <div class="col border-right"> </div>
+                    <div class="col"> </div>
+                </div>
+            </div>
+            <div class="col-sm">
+            </div>
+        </div>
+        <span hidden>@(length--) </span>
+    }
+    }
+
+    
+    
+    
+ 
+  
+    
+ 
+</div>

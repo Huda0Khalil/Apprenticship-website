@@ -1,0 +1,79 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.DTO
+@using Apprenticeship2.Data.Entities
+@model updateTrainingDTO
+
+
+<form method="post" action="/Training/updateTraining">
+    <h2>Create a new Training.</h2>
+    <hr />
+    <input asp-for="trainingId" hidden />
+    <div class="form-floating">
+
+        <select asp-for="studentId" class="form-control">
+            @foreach (var St in (List<Student>)ViewBag.students)
+            {
+                @if (St.Id == Model.studentId)
+                {
+                    <option value="@St.Id" selected>@St.FirstName @St.LastName</option>
+                }
+                <option value="@St.Id">@St.FirstName @St.LastName</option>
+
+                
+            }
+        </select>
+        <label asp-for="studentId"></label>
+    </div>
+    <div class="form-floating">
+        <select asp-for="supervisorId" class="form-control">
+            @foreach (var Sup in (List<UniversitySupervisor>)ViewBag.supervisors)
+            {
+                @if (Sup.Id == Model.supervisorId)
+                {
+                    <option value="@Sup.Id" selected>@Sup.FirstName @Sup.LastName</option>
+                }
+                <option value="@Sup.Id">@Sup.FirstName @Sup.LastName</option>
+            }
+        </select>
+        <label asp-for="supervisorId"></label>
+    </div>
+    <div class="form-floating">
+        <select asp-for="teamLeaderId" class="form-control">
+            @foreach (var T in (List<TeamLeader>)ViewBag.teamLeaders)
+            {
+                @if (T.Id == Model.teamLeaderId)
+                {
+                    <option value="@T.Id" selected>@T.FirstName @T.LastName</option>
+                }
+               
+                <option value="@T.Id">@T.FirstName @T.LastName</option>
+            }
+        </select>
+        <label asp-for="teamLeaderId"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="startDate" class="form-control" aria-required="true" />
+        <label asp-for="startDate"></label>
+    </div>
+    <div class="form-floating">
+        <input asp-for="endDate" class="form-control" aria-required="true" />
+        <label asp-for="endDate"></label>
+    </div>
+    <div class="form-floating">
+        <select asp-for="objectiveIDs" class="form-control" multiple>
+            @foreach (var O in (List<Objective>)ViewBag.objectives)
+            {
+                
+                <option value="@O.objectiveId"> @O.Name </option>
+               
+            }
+        </select>
+        <label asp-for="objectiveIDs"></label>
+    </div>
+    <button type="submit" class="w-100 btn btn-lg btn-primary">Save</button>
+
+</form>

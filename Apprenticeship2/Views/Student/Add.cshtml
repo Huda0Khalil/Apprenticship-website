@@ -1,0 +1,137 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+@using Apprenticeship2.Data.DTO
+@model InsertStudentDTO
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="form-validation" class="form-valide">
+                        <form method="post" action="/student/insertStudent">
+                            <h2>Create a new student.</h2>
+                            <hr />
+
+                            <div class="form-group row">
+                                <label asp-for="firstName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="firstName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="firstName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="secondName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="secondName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="secondName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="thirdName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="thirdName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="thirdName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="lastName" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="lastName" class="form-control" aria-required="true" />
+                                <span asp-validation-for="lastName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="studentEmail" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="studentEmail" class="form-control" aria-required="true" />
+                                <span asp-validation-for="studentEmail" class="text-danger">Student Email</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Age" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Age" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Age" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Address" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Address" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-lg-4 col-form-label">universities</label>
+                                <div class="col-lg-6">
+                                <select asp-for="universityId" class="form-control" aria-required="true">
+                                    @foreach (var u in (List<University>)ViewBag.universities)
+                                    {
+                                        <option value="@u.universityId">@u.universityName</option>
+                                    }
+
+                                </select>
+                                <span asp-validation-for="universityId" class="text-danger"></span>
+
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="Major" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="Major" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Major" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="GPA" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="GPA" class="form-control" aria-required="true" />
+                                <span asp-validation-for="GPA" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="CompletedHours" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="CompletedHours" class="form-control" aria-required="true" />
+                                <span asp-validation-for="CompletedHours" class="text-danger">Completed Hours</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="PhoneNumber" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="PhoneNumber" class="form-control" aria-required="true" />
+                                <span asp-validation-for="PhoneNumber" class="text-danger">Phone Number</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="password" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="password" class="form-control" aria-required="true" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label asp-for="ConfirmPassword" class="col-lg-4 col-form-label"></label>
+                                <div class="col-lg-6">
+                                <input asp-for="ConfirmPassword" class="form-control" aria-required="true" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger">Confirm Password</span>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-lg-8 ml-auto">
+                                    <button type="submit" class="btn btn-primary">Add</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+   

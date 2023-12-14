@@ -1,0 +1,114 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using Apprenticeship2.Data.Entities
+
+
+
+
+<div class="container-fluid mt-3">
+    <h2 class="m-3 text-black text-center">Trainings</h2>
+
+    <div class="row d-flex justify-content-center">
+        @foreach (var T in (List<Training>)ViewBag.trainings)
+        {
+            <div class="col-lg-6">
+                <div class="card ">
+                    <div class="card-body">
+                        <div class="text-center">
+
+                            <h5 class="m-3">Objectives:</h5>
+                            <ul>
+                                @foreach (var TO in (List<TrainingObjectives>)T.trainingObjectives)
+                                {
+                                    <li class="m-3 text-black">@TO.objective.Name</li>
+                                }
+                            <h6 class="m-3 mb-1">Student Name: @T.student.FirstName @T.student.SecondName </h6>
+                            </ul>
+                            <h6 class="m-3">Student Email: @T.student.Email</h6>
+                            <h6 class="m-3">Student phone: @T.student.PhoneNumber</h6>
+                            <h6 class="m-3">Company: @T.teamLeader.Company.companyName</h6>
+                            <h6 class="m-3 mb-1">Team Leader Name: @T.supervisor.FirstName @T.supervisor.SecondName </h6>
+
+                            <h6 class="m-3">Student Email: @T.supervisor.Email</h6>
+                            <h6 class="m-3">Student phone: @T.supervisor.PhoneNumber</h6>
+                            <hr>
+                            <p class="d-flex justify-content-around">
+                                <span class="d-block">Start date: @T.startDate</span>
+                                <span class="d-block">End date: @T.endDate</span>
+                            </p>
+                            <hr>
+                            <p>
+                                <a class="btn btn-info gradient-2-shadow mb-4" href="/UniversitySupervisor/showAssignment?TID=@T.TrainingId">Show</a>
+                            </p>
+
+                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        }
+     
+      
+
+    </div>
+    <br />
+    
+    <h2 class="m-3 text-dark text-center">Students</h2>
+    <div class="row">
+
+        @foreach (var s in (List<Training>)ViewBag.Students)
+        {
+            <a href=""></a>
+            <div class="col-lg-4 col-md-12">
+                <div class="card gradient-2-shadow">
+                    <div class="card-body">
+                        <div class="text-center">
+                            <img src="./images/imgs/user.png" class="rounded-circle" alt="">
+                            <h5 class="mt-3 mb-1">@s.student.FirstName @s.student.SecondName @s.student.LastName</h5>
+                            <p class="m-1 text-dark">@s.student.Major</p>
+                            <p class="m-1 text-dark"> Completed hours: @s.student.CompletedHours hours</p>
+                            <p class="m-1 text-dark"> GPA: @s.student.GPA</p>
+
+                            <!--
+                            </><a class="text-decoration-none" target="_blank" href="/Report/GetFile?attachmentId=">Show Training</a>
+                            -->
+                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+
+
+
+    </div>
+    <br />
+    <br />
+    <h2 class="m-3 text-dark text-center">Companies</h2>
+
+    <div class="row">
+        @foreach (var C in (List<Company>)ViewBag.companaies)
+        {
+            <div class="col-md-6 col-lg-4 ">
+                <div class="card gradient-1">
+               
+                <div class="card-body">
+                    <h1 class="card-title text-white text-center p-2 border border-5 border-dark">@C.companyName</h1>
+                        <p class="card-text text-white mt-3">Address: @C.companyLocation</p>
+                        <p class="card-text text-white">Email: @C.companyEmail</p>
+                        <p class="card-text text-white">Phone: @C.companyPhone</p>
+                    
+                </div>
+            </div>
+        </div>
+        }
+      
+        <!-- End Col -->
+        </div>
+
+</div>
+</div>
